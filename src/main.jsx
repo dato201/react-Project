@@ -4,7 +4,5 @@ import App from './App.jsx'
 import './atoms/config/i18n.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>, 
+    <App />,
 )
