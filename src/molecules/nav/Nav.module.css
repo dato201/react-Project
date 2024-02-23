@@ -1,4 +1,13 @@
 .nav {
     display: flex;
     column-gap: 20px;
+
+}
+
+.li:hover {
+    transform: translateY(-6px);
+}
+
+.li:active {
+    transform: translateY(0);
 }

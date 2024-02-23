@@ -2,18 +2,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+
 }
 
 .h4 {
     font-size: 20px;
-    font-weight: 700;
-    color: white;
+    font-weight: 800;
+    color: #f79000;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .meteor {
+    color: #ffffff;
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 400;
 }

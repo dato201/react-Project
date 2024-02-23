@@ -1,7 +1,15 @@
 .Header {
     width: 100%;
     padding: 20px;
-    background-color: rgb(202, 37, 37);
+    background-color: #ca2525;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+.div {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
 }

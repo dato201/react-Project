@@ -11,8 +11,7 @@ button {
   color: #3B3B3B;
   cursor: pointer;
   display: inline-block;
-  /* font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; */
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 600;
   line-height: normal;
   margin: 0;
@@ -49,5 +48,22 @@ button:active {
 
 .fa-meteor {
   font-size: 30px;
-  color: white;
+  color: #f9f506;
+}
+
+input {
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3B3B3B;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+}
+
+::-ms-input-placeholder {
+  color: #3b3b3bb0;
+}
+
+::placeholder {
+  color: #3b3b3bb0;
 }

@@ -1,11 +1,14 @@
 .AppLink {
     color: white;
-    font-size: 19px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 800;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-
 }
 
 .AppLink:hover {
     border-bottom: 6px solid white;
+}
+
+.AppLink:active {
+    border-bottom: 0px;
 }

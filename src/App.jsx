@@ -1,15 +1,30 @@
-// import { useTranslation } from 'react-i18next';
+import { Route, Routes } from 'react-router-dom';
 import './atoms/styles/_global.css';
 import './atoms/styles/reset.css';
 import { Header } from './organisms/Headers/Header';
+import { MasterTemplate } from './templates/MasterTemplate/MasterTemplate';
+import { routerConfig } from './atoms/config/routerConfig.js';
 
 const App = () => {
-  // const { t, i18n } = useTranslation();
+
+  const renderWithWrapper = (route) => {
+    const Template = () => {
+      return (
+        <MasterTemplate Header={route.header && <Header />}>
+          {<route.element />}
+        </MasterTemplate>
+      )
+    }
+
+    return (
+      <Route key={route.id} path={route.path} element={<Template />} />
+    )
+  }
 
   return (
-    <>
-    <Header />
-    </>
+    <Routes>
+      {routerConfig.map(renderWithWrapper)}
+    </Routes>
   )
 }
 

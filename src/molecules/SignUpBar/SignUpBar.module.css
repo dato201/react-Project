@@ -1,0 +1,12 @@
+.Sign_div {
+    display: flex;
+    gap: 8px;
+}
+
+.button {
+    color: #000;
+    font-weight: 800;
+    background-color: #f79000;
+    border: none;
+    color: white;
+}
