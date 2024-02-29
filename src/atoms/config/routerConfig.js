@@ -1,7 +1,7 @@
 import { AboutPage } from "../../pages/AboutPage/AboutPage";
 import { MainPage } from "../../pages/MainPage/MainPage";
 import { Products } from '../../pages/Products/Products';
-// import { SignInPage } from "../../pages/SignInPage/SignInPage";
+import { SignInPage } from "../../pages/SignInPage/SigninPage";
 import { SignUpPage } from "../../pages/SignUpPage/SignUpPage";
 
 export const routerConfig = [
@@ -28,5 +28,11 @@ export const routerConfig = [
     path: '/sign-up',
     element: SignUpPage,
     header: false,
-  }
+  },
+  {
+    id: 4,
+    path: '/log-in',
+    element: SignInPage,
+    header: false,
+  },
 ]

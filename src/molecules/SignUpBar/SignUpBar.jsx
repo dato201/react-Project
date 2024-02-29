@@ -8,7 +8,7 @@ const SignUpBar = () => {
     return (
         <div className={classes.Sign_div}>
             <NavLink to={'/sign-up'}><button className={classes.button}>{t('Sign Up')}</button></NavLink>
-            <button className={classes.button}>{t('Log In')}</button>
+            <NavLink to={'/log-in'}><button className={classes.button}>{t('Log In')}</button></NavLink>
         </div>
     );
 }
