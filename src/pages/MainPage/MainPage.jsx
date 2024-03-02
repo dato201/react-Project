@@ -6,7 +6,7 @@ import { getProducts, getProductsLoading } from "../../atoms/store/model/selecto
 import { getProductsService } from "../../atoms/store/model/services/products/getProductsService";
 import { ProductCard } from "../../molecules/ProductCard/ProductCard";
 import { Skeleton } from 'primereact/skeleton';
-// import { Layout } from "../../templates/Layout/Layout";
+import { Layout } from "../../templates/Layout/Layout";
 
 
 
