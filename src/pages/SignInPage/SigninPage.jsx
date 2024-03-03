@@ -73,7 +73,7 @@ const SignInPage = () => {
     return (
         <div className={classes.SignInPage}>
             <div className={classes.panel}>
-                <NavLink to={'/'}><i class="fa-solid fa-caret-left"></i>home</NavLink>
+                <NavLink to={'/'}><i className="fa-solid fa-caret-left"></i>home</NavLink>
                 <h1 className={classes.h1}>{t('Log In')}</h1>
                 <input name="email" value={formik.email} className={classNames({ 'p-invalid': isFormFieldInvalid('email') })} onChange={formik.handleChange} type="email" placeholder="Email" />
                 {isFormFieldInvalid('email') && (
@@ -91,7 +91,7 @@ const SignInPage = () => {
                         <div className={classes.errorContainer}>{authError}</div>
                     )
                 }
-                <Button onClick={submit} loading={isLoading}>Register</Button>
+                <Button  onClick={submit} loading={isLoading}>Register</Button>
             </div>
         </div>
     );

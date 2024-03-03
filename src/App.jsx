@@ -1,10 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import './atoms/styles/_global.css';
 import './atoms/styles/reset.css';
+import './atoms/styles/_global.css';
 import { Header } from './organisms/Headers/Header';
 import { MasterTemplate } from './templates/MasterTemplate/MasterTemplate';
 import { routerConfig } from './atoms/config/routerConfig.js';
-
 const App = () => {
 
   const renderWithWrapper = (route) => {

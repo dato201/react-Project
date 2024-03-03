@@ -61,7 +61,7 @@ const SignUpPage = () => {
   return (
     <div className={classes.SignUpPage}>
       <div className={classes.panel}>
-        <NavLink to={'/'}><i class="fa-solid fa-caret-left"></i>home</NavLink>
+        <NavLink to={'/'}><i className="fa-solid fa-caret-left"></i>home</NavLink>
         <h1 className={classes.h1}>{t('Sign Up')}</h1>
         <input name="firstName" value={formik.values.firstName} className={classNames({ 'p-invalid': isFormFieldInvalid('firstName') })} onChange={formik.handleChange} placeholder="First Name..." />
 

@@ -10,9 +10,9 @@ const Nav = () => {
     return (
         <nav>
             <ul className={classes.nav}>
-                <li className={classes.li}><AppLink className={classes.a} to={'/'}>{t('Home')}</AppLink></li>
-                <li className={classes.li}><AppLink className={classes.a} to={'/products'}>{t('Products')}</AppLink></li>
-                <li className={classes.li}><AppLink className={classes.a} to={'/about-us'}>{t('About Us')}</AppLink></li>
+                <li className={classes.li}><AppLink to={'/'}>{t('Home')}</AppLink></li>
+                <li className={classes.li}><AppLink to={'/products'}>{t('Products')}</AppLink></li>
+                <li className={classes.li}><AppLink to={'/about-us'}>{t('About Us')}</AppLink></li>
             </ul>
         </nav>
     );

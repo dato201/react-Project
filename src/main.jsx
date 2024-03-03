@@ -4,7 +4,8 @@ import App from './App.jsx'
 import './atoms/config/i18n.js'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { store } from './atoms/store/store.js'
+import { store } from './atoms/store/store'
+import './atoms/config/i18n';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>

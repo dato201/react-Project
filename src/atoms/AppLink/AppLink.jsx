@@ -18,4 +18,4 @@ AppLink.propTypes = {
     children: PropTypes.element,
 }
 
-export { AppLink }
+export { AppLink };
