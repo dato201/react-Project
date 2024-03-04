@@ -91,7 +91,7 @@ const SignInPage = () => {
                         <div className={classes.errorContainer}>{authError}</div>
                     )
                 }
-                <Button  onClick={submit} loading={isLoading}>Register</Button>
+                <Button onClick={submit} loading={isLoading}>Register</Button>
             </div>
         </div>
     );
