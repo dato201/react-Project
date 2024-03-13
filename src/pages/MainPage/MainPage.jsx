@@ -42,14 +42,15 @@ const MainPage = (props) => {
           })}
           <Skeleton className="mb-2"></Skeleton>
           {productsLoading && (
-          <>
+            <>
+              {/* <Skeleton width="300px" height="566px" />
           <Skeleton width="300px" height="566px" />
           <Skeleton width="300px" height="566px" />
           <Skeleton width="300px" height="566px" />
           <Skeleton width="300px" height="566px" />
-          <Skeleton width="300px" height="566px" />
-          <Skeleton width="300px" height="566px" />
-          </>
+          <Skeleton width="300px" height="566px" /> */}
+              <h1>Loading . . .</h1>
+            </>
           )}
           {/* <Paginator first={first} rows={rows} totalRecords={totalCount} onPageChange={onPageChange} /> */}
         </div>
