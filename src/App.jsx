@@ -4,7 +4,31 @@ import './atoms/styles/_global.css';
 import { Header } from './organisms/Headers/Header';
 import { MasterTemplate } from './templates/MasterTemplate/MasterTemplate';
 import { routerConfig } from './atoms/config/routerConfig.js';
+import { useEffect } from 'react';
+import { $api } from './atoms/config/api.js';
+import { useDispatch } from 'react-redux';
+import { userActions } from './atoms/store/model/slices/userSlice.js';
+
 const App = () => {
+  const dispatch = useDispatch();
+
+  const checkUser = async () => {
+    try { 
+      const response = await $api.get('/profile');
+
+      if(response.status === 200) {
+        dispatch(userActions.setUser(response.data));
+      }
+    }
+    
+    catch(e) {
+      console.error(e.message);
+    }
+  }
+  
+  useEffect(() => {
+    checkUser();
+  }, [checkUser])
 
   const renderWithWrapper = (route) => {
     const Template = () => {
