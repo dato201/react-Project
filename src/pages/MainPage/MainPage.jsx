@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import classes from "./MainPage.module.css"
 import { useEffect, useState } from "react";
-import { getProducts, getProductsLoading } from "../../atoms/store/model/selectors/product/productSelectors";
+import { getProducts, getProductsLoading, getProductsTotalCount } from "../../atoms/store/model/selectors/product/productSelectors";
 import { getProductsService } from "../../atoms/store/model/services/products/getProductsService";
 import { ProductCard } from "../../molecules/ProductCard/ProductCard";
 import { Skeleton } from 'primereact/skeleton';
@@ -18,6 +18,7 @@ const MainPage = (props) => {
   const [first, setFirst] = useState(0);
   const [rows, setRows] = useState(20)
   const productsLoading = useSelector(getProductsLoading);
+  const totalCount = useSelector(getProductsTotalCount);
 
   useEffect(() => {
     dispatch(getProductsService({
@@ -40,7 +41,6 @@ const MainPage = (props) => {
               <ProductCard key={product.id} product={product} />
             )
           })}
-          <Skeleton className="mb-2"></Skeleton>
           {productsLoading && (
             <>
               {/* <Skeleton width="300px" height="566px" />
@@ -49,10 +49,12 @@ const MainPage = (props) => {
           <Skeleton width="300px" height="566px" />
           <Skeleton width="300px" height="566px" />
           <Skeleton width="300px" height="566px" /> */}
-              <h1>Loading . . .</h1>
+              <div className={classes.loader}></div>
             </>
           )}
-          {/* <Paginator first={first} rows={rows} totalRecords={totalCount} onPageChange={onPageChange} /> */}
+          {!productsLoading && (
+            <Paginator className={classes.b16} first={first} rows={rows} totalRecords={totalCount} onPageChange={onPageChange} />
+          )}
         </div>
       </div>
     </div>

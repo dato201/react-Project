@@ -3,6 +3,7 @@ import classes from './SignUpBar.module.css'
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUser } from '../../atoms/store/model/selectors/user/userSelectors';
+import { Avatar } from 'primereact/avatar';
 
 const SignUpBar = () => {
     const { t, i18n } = useTranslation();
@@ -13,19 +14,25 @@ const SignUpBar = () => {
     const logOut = () => {
         dispatch(userActions.logOut())
     }
+    const user2 = {
+        firstName: "tests",
+        lastName: "testing",
+        email: "test@gmail.com",
+        password: "12345678"
+    }
 
-    if (user) {
+    if (user2) {
         return (
             <div className={classes.HeaderAuthBar}>
                 <div className={classes.avatarContainer}>
                     <Avatar
-                        label={`${user.firstName[0].toUpperCase()}${user.lastName[0].toUpperCase()}`}
+                        label={`${user2.firstName[0].toUpperCase()}${user2.lastName[0].toUpperCase()}`}
                         size="xlarge"
                         shape="circle"
                     />
-                    <span>{user.firstName} {user.lastName}</span>
+                    <span>{user2.firstName} {user2.lastName}</span>
                 </div>
-                <Button onClick={logOut}>Log out</Button>
+                <button onClick={logOut}>Log out</button>
             </div>
         )
     }
