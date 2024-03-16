@@ -10,3 +10,26 @@
     border: none;
     color: white;
 }
+
+.HeaderAuthBar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatarContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    border-radius: 100%;
+    background-color: rgb(255, 230, 0);
+    padding: 10px;
+    color: rgb(149, 134, 2);
+}
+
+.name {
+    color: white;
+}

@@ -25,14 +25,11 @@ const SignUpBar = () => {
         return (
             <div className={classes.HeaderAuthBar}>
                 <div className={classes.avatarContainer}>
-                    <Avatar
-                        label={`${user2.firstName[0].toUpperCase()}${user2.lastName[0].toUpperCase()}`}
-                        size="xlarge"
-                        shape="circle"
-                    />
-                    <span>{user2.firstName} {user2.lastName}</span>
+                    <h2 className={classes.name}>{user2.firstName} {user2.lastName}</h2>
+
+                    <div className={classes.icon}><h2>{user2.firstName[0].toUpperCase()}{user2.lastName[0].toUpperCase()}</h2></div>
                 </div>
-                <button onClick={logOut}>Log out</button>
+                {/* <button className={classes.button} onClick={logOut}>Log out</button> */}
             </div>
         )
     }

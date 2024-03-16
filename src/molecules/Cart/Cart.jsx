@@ -13,7 +13,7 @@ const Cart = (props) => {
       <Button icon="pi pi-shopping-cart" onClick={(e) => op.current.toggle(e)}></Button>
       <OverlayPanel ref={op} showCloseIcon closeOnEscape>
         <CartProductList />
-      </OverlayPanel>
+      </OverlayPanel> 
     </div>
   );
 };
